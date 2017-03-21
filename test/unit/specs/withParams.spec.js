@@ -11,22 +11,13 @@ describe('withParams validator modifier', () => {
     expect(() => withParams([], func)).to.throw
   })
 
-  it('should throw on string params in closure', () => {
+  it('should throw on invalid params in closure', () => {
     const v = withParams((addParams) => () => addParams('notObject'))
     expect(v).to.throw('params must be an object')
   })
 
-  it('should throw on array params in closure', () => {
-    const v = withParams((addParams) => () => addParams([]))
-    expect(v).to.throw('params must be an object')
-  })
-
-  it('should throw on string input', () => {
+  it('should throw on invalid input', () => {
     expect(() => withParams({}, 'string')).to.throw
-  })
-
-  it('should throw on array input', () => {
-    expect(() => withParams({}, [])).to.throw
   })
 
   it('should return a function', () => {
