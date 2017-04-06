@@ -68,7 +68,7 @@ const validationGetters = {
     })
   },
   $error () {
-    return this.$dirty && !this.$pending && this.$invalid
+    return !this.$pending && this.$dirty && this.$invalid
   },
   $pending () {
     const proxy = this.proxy
