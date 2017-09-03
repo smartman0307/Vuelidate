@@ -8,11 +8,6 @@ export const req = value => {
     return false
   }
 
-  if (value instanceof Date) {
-    // invalid date won't pass
-    return !isNaN(value.getTime())
-  }
-
   if (typeof value === 'object') {
     for (let _ in value) return true
     return false
