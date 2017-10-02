@@ -16,7 +16,7 @@ mixin validatorRow(validator, params)
     | simple predicates - functions of data into <kbd>boolean</kbd>, which denotes
     | if data is valid. You can easily write your own
     | or use any function in this shape from any library you already have, like
-    | <kbd>_.conforomsTo</kbd> from <em>lodash</em> or higher order functions
+    | <kbd>_.conformsTo</kbd> from <em>lodash</em> or higher order functions
     | and chains like <kbd>R.cond</kbd> from <em>ramda</em>.
     | Think of the possibilities.
   p.typo__p
@@ -67,10 +67,6 @@ mixin validatorRow(validator, params)
               | Requires the input to have a minimum specified length, inclusive. Works with arrays.
             +validatorRow('maxLength', ['max length'])
               | Requires the input to have a maximum specified length, inclusive. Works with arrays.
-            +validatorRow('minValue', ['min'])
-              | Requires entry to have a specified minimum numeric value.
-            +validatorRow('maxValue', ['max'])
-              | Requires entry to have a specified maximum numeric value.
             +validatorRow('between', ['min, max'])
               | Checks if a number is in specified bounds. Min and max are both inclusive.
             +validatorRow('alpha')

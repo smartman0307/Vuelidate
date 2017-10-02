@@ -12,8 +12,6 @@ import sameAs from './sameAs'
 import url from './url'
 import or from './or'
 import and from './and'
-import minValue from './minValue'
-import maxValue from './maxValue'
 
 export {
   alpha,
@@ -29,7 +27,5 @@ export {
   sameAs,
   url,
   or,
-  and,
-  minValue,
-  maxValue
+  and
 }
